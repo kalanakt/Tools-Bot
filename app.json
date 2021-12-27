@@ -1,0 +1,45 @@
+{
+  "name": "Tools Bot",
+  "description": "A Telegram Tools Bot with proper functions written in Python with Pyrogram .",
+  "repository": "https://github.com/The-Mayans/Tools-Bot",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+  "keywords": [
+  "python3",
+  "telegram",
+  "bot",
+  "Tools",
+  "ToolsBot",
+  "telegram-bot",
+  "pyrogram"
+  ],
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A Bot's token from Botfather",
+      "value": "",
+      "required": true
+    }
+  },
+  "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
